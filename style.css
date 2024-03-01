@@ -1,0 +1,511 @@
+/*ESTILO GERAL*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color:beige;
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+
+}
+
+.btn-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #288256 ;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+ button:hover, form .btn-enviar input:hover{
+    box-shadow: 0px 0px 8px #0e653b;
+    transform:scale(1.05) ;
+}
+
+
+/*IMAGEM DA LOGO*/
+.imagem{
+    float: left;
+    width: 160px;
+    height: auto;
+    margin-right: 30px;
+}
+
+h2.titulo{
+    color: black;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span{
+    color: #288256;
+}
+
+/*estilo do cabeçalho*/
+header{
+    padding: 30px 4%;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color:rgb(105, 105, 105);
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header nav.menu-desktop a:hover{
+    color: black;
+    transform: scale(1.10);
+}
+
+header nav ul{
+    list-style-type:none ;
+}
+
+header nav.menu-desktop ul li{
+    display: inline-block;
+    padding: 0 40px;
+}
+
+/*estilo do  menu mobile*/
+
+.btn-abrir-menu i{
+    color: #288256;
+    font-size: 40px;
+}
+.menu-mobile{
+    background-color:rgb(41, 41, 41) ;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.menu-mobile.abrir-menu{
+    width: 70%;
+}
+
+.menu-mobile.btn-abrir-menu ~ .overlay-menu{
+     display: block;
+}
+
+.menu-mobile .btn-fechar{
+    padding: 20px 5%;
+}
+
+
+.menu-mobile .btn-fechar i{
+    color:beige;
+    font-size: 30px;
+}
+
+
+.menu-mobile nav ul{
+    text-align: right;
+}
+
+.menu-mobile nav ul li a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}
+
+.menu-mobile nav ul li a:hover{
+    background-color: #288256;
+    color: black;
+}
+
+.overlay-menu{
+   background-color: rgba(0, 0, 0, 0.667);
+   width: 100%;
+   height: 100%;
+   position: fixed; 
+   top: 0;
+   left: 0;
+   z-index: 88888;
+   display: none;
+}
+
+/*ESTILO DO TOPO DO SITE */
+
+section.topo-do-site{
+    padding: 40px 4%;
+}
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-do-site h1{
+    font-size: 38px;
+    line-height: 40px;
+}
+
+.topo-do-site .txt-topo-site h1 span{
+    color: #288256 ;
+}
+
+.topo-do-site .txt-topo-site p{
+    color: black;
+    margin: 40px 0;
+}
+
+.topo-do-site .img-topo-site img{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+    width: 400px;
+}
+
+@keyframes  flutuar{
+    0% {
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+/* ESTILO DAS ESPECIALIDADES */
+section.especialidades{
+    padding: 40px 4%;
+    box-shadow:0 0 40px 10px #a2b4ab67 ;
+
+}
+
+section.especialidades .flex{
+    gap: 60px;
+}
+
+.especialidades .especialidades-box{
+    color: black;
+    padding: 40px;
+    border-radius:20px ;
+    margin-top: 40px;
+    transition: .2s;
+}
+
+.especialidades .especialidades-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #a2b4ab67;
+}
+
+.especialidades .especialidades-box i{
+    font-size: 60px;
+    color:#0e653b;
+}
+
+.especialidades .especialidades-box h3{
+    font-size: 25px;
+    margin: 15px 0;
+}
+
+/*ESTILO DO SOBRE */
+section.sobre{
+    padding: 80px 4%;
+
+}
+
+section.sobre .img-sobre img{
+    width: 450px;
+}
+
+section.sobre .flex {
+    align-items: center;
+    gap: 55px;
+}
+
+.sobre .txt-sobre{
+    color: black;
+}
+
+.sobre .txt-sobre h2{
+     font-size: 35px;
+     line-height: 40px;
+     margin-bottom: 30px;
+}
+ 
+.sobre .txt-sobre h2 span{
+    color: #0e653b;
+    display: block;
+}
+
+.sobre .txt-sobre p{
+    margin: 15px 0;
+    text-align: justify;
+}
+
+ .btn-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #288256;
+    font-size: 10px;
+    cursor: pointer;
+    margin: 0 6px;
+    transition: .2s;
+    font-size: 20px;
+}
+
+/*ESTILO DO PORTFOLIO*/
+section.portfolio{
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #a2b4ab67;
+}
+
+section.portfolio .flex{
+    justify-content:space-around ;
+    margin-top: 60px;
+    
+}
+
+
+.img-port {
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: 55% 0% ;
+    transition: 3s ;
+    cursor: pointer;
+    border-radius: 40px;
+    position:relative ;
+}
+
+.img-port:hover{
+    background-position: 55% 100%;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100% ;
+    background-color:#a3baaf1e;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:24px ;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover{
+    opacity: 1;
+}
+
+/*ESTILO DO FORMULARIO DE CONTATO*/
+section.formulario{
+    padding: 80px 4%;
+}
+
+.contato-1{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.contato-1 input, .contato-1 textarea{
+    width: 100%;
+    background-color: rgb(223, 223, 195);
+    border: none;
+    outline:0 ;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: black;
+    font-size:15px ;
+}
+
+.contato-1 textarea{
+    resize: none;
+    max-height: 150px;
+}
+ 
+
+.contato-1 .botao{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.contato-1 .btn-enviar{
+    width: 120px;
+
+
+}
+
+.contato-1 .btn-enviar{
+    width: 150px;
+    height: 45px;
+    background-color: #0e653b;
+    color: black;
+    font-weight: 700 ;
+    cursor: pointer;
+    border-style: none;
+    padding: 9px 12px;
+    font-size: 1rem;
+    border-radius: 18px;
+}
+
+
+/*ESTILO RODAPÉ*/
+footer{
+    padding: 40px 4%;
+    box-shadow:0 0 40px 10px #a2b4ab67 ;
+}
+
+footer .flex{
+    justify-content: space-between;
+}
+
+footer .line-footer{
+    padding: 15px 0;
+}
+
+.borda{
+    border-top: 2px solid #0e653b;
+}
+
+footer .line-footer p i{
+    color: #0e653b;
+    font-size: 22px;
+}
+
+footer .line-footer p a{
+    color: black;
+}
+
+
+/* IMAGEM LOGO*/
+footer .logo-footer img{
+     width: 150px;
+}
+
+@media screen and (max-width: 1020px){
+    /*GERAL*/
+    .flex {
+        flex-direction: column;
+    }
+
+    .topo-do-site .flex{
+        flex-direction: column-reverse;
+    }
+
+    h2 .titulo{
+        font-size: 33px;
+        line-height: 30px;
+    }
+
+    /*CABEÇARIO*/
+    .menu-desktop, .btn-contato{
+        display: none;
+    }
+
+    /*TOPO DO SITE */
+    section .topo-do-site .flex{
+        gap: 40px;
+    }
+    section .topo-do-site{
+        padding: 20px 8%;
+    }
+
+    .topo-do-site h1{
+        font-size: 30px;
+    }
+    /*IMAGEM*/
+    .topo-do-site .img-topo-site img{
+        width: 100%;
+    }
+ 
+    /*ESPECIALIDADES*/
+    section .especialidades{
+        padding:  40px 8%;
+    }
+
+    /*sobre*/
+    section .sobre {
+        padding:80px 8%;
+    }
+
+    .sobre .txt-sobre h2{
+        font-size: 35px;
+        line-height: 35px;
+        text-align: center;
+    }
+
+    /*botoes*/
+    .btn-social{
+        text-align: center;
+    }
+
+    /*imagem2*/
+    .img-sobre img{
+        width: 100%;
+    }
+
+    /*portifolio*/
+    section .portfolio{
+        padding: 80px 8%;
+    }
+
+    .img-port {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    section .portfolio .flex{
+        gap: 60px;
+    }
+
+    /*rodape*/
+    footer .flex{
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    footer .line-footer{
+        text-align: center;
+    }
+}
+
+h2 .education{
+    
+    
+
+}
