@@ -20,6 +20,7 @@ const telefone = document.querySelector('#celular');
 const email = document.querySelector('#email');
 const mensagem = document.querySelector('#mensagem');
 const enviar = document.querySelector('.btn-enviar');
+const mensagemDiv = document.querySelector('#mensagem-div'); // Selecionando o elemento para exibir mensagens
 
 let nomeInput = '';
 let telefoneInput = '';
@@ -44,12 +45,17 @@ async function EnviarEmail(payload) {
         .send('service_7pxnyhk', 'template_dwjssms', payload, 'N_XJtZpGdGSIiPeDT')
         .then(
             function (response) {
-                console.log('SUCCESS!', response.status, response.text);
+                console.log('SUCCESS!', response.status, response.text);    
+                displayMessage('Obrigado pelo contato!');
             },
             function (error) {
                 console.log('FAILED...', error);
             },
         );
+}
+
+function displayMessage(message) {
+    mensagemDiv.textContent = message;
 }
 
 enviar.addEventListener('click', async () => {
@@ -63,7 +69,6 @@ enviar.addEventListener('click', async () => {
     };
    EnviarEmail(payload); 
   console.log(payload)
+
 });
-
-
 

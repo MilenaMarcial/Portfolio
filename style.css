@@ -361,6 +361,7 @@ section.formulario{
 .contato-1 .botao{
     margin-top: 20px;
     text-align: center;
+    
 }
 
 .contato-1 .btn-enviar{
@@ -481,6 +482,7 @@ footer .logo-footer img{
     /*portifolio*/
     section .portfolio{
         padding: 80px 8%;
+
     }
 
     .img-port {
@@ -491,6 +493,7 @@ footer .logo-footer img{
 
     section .portfolio .flex{
         gap: 60px;
+        
     }
 
     /*rodape*/
@@ -502,10 +505,18 @@ footer .logo-footer img{
     footer .line-footer{
         text-align: center;
     }
+
+    /*contato*/
+    .contato-1{
+        margin: 15px;
+    }
 }
 
-h2 .education{
-    
-    
-
+/*AGRADECIMENTO*/
+#mensagem-div {
+    color: black;
+    font-size: 18px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin-top: 30px;
 }
